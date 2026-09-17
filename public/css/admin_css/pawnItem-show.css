@@ -1,0 +1,249 @@
+/* ==========================================================================
+   PAWN ITEM SHOW MODULE STYLESHEET
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+.pawn-container-wrapper {
+    padding: 10px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Master Layout Grid Setup */
+.show-wrapper {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 25px;
+    margin-top: 15px;
+    align-items: start; /* ការពារកុំឱ្យ Panel ខាងឆ្វេងយារតាមខាងស្តាំ */
+}
+
+/* Reusable Card Base CSS Elements */
+.sticky-card, .content-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* LEFT PANEL: Sticky Layout Alignment */
+.sticky-card {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px; /* រក្សាតាម scrolling viewport ពេលអូសចុះក្រោម */
+    text-align: center;
+}
+
+/* Image Assets & Media Previews */
+.photo-preview-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.preview-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.no-photo-box {
+    width: 100%;
+    height: 200px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 13px;
+    border: 1px dashed #d1d5db;
+}
+
+.no-photo-box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Typography Headings */
+.meta-title {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+    color: #0b2240; /* ពណ៌ខៀវធំលំនាំដើម */
+    font-weight: 700;
+}
+
+.meta-subtitle {
+    margin: 0 0 20px 0;
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Structured Sidebar Information Rows */
+.stats-summary {
+    border-top: 1px dashed #e5e7eb;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #4b5563;
+}
+
+.stats-row strong {
+    color: #111827;
+}
+
+/* Global Nav Button Control Elements */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    color: #4b5563;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* RIGHT PANEL: Heading Styles */
+.section-heading-show {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: #0b2240;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* HTML Table Base Module Architecture */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.schedule-table th {
+    background-color: #0b2240; /* ពណ៌ខៀវដូចបណ្ដាទំព័រមុនៗ */
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.schedule-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    color: #334155;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Status Pill Indicators Components */
+.badge-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.badge-paid {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.badge-unpaid {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+/* Dynamic Action Button Interactions */
+.pay-action-btn {
+    background-color: #16a34a; /* ពណ៌បៃតងសម្រាប់ប្រតិបត្តិការបង់ប្រាក់ */
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.15s ease;
+}
+
+.pay-action-btn:hover {
+    background-color: #15803d;
+}
+
+/* Success Message Text Label Formatting */
+.success-msg-label {
+    color: #16a34a;
+    font-weight: 700;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Khmer Font Global Hook */
+.khmer-os {
+    font-family: 'Battambang', 'Khmer OS Battambang', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .show-wrapper {
+        grid-template-columns: 1fr; /* ប្តូរមកជា ១ ជួរឈរលើ Tablet */
+    }
+    .sticky-card {
+        position: static; /* ដកចរន្ត sticky ចេញពេលអេក្រង់តូច */
+    }
+}
+
+@media (max-width: 640px) {
+    .sticky-card, .content-card {
+        padding: 16px;
+    }
+    
+    /* អនុញ្ញាតឱ្យអូសតារាងផ្ដេកលើទូរស័ព្ទដៃ */
+    .content-card {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .schedule-table {
+        min-width: 650px; /* ការពារកុំឱ្យទិន្នន័យតារាងរួញជាន់គ្នា */
+    }
+}

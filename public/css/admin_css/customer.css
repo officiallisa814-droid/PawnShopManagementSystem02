@@ -1,0 +1,450 @@
+/* --- Outer Container Structuring --- */
+.customer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Header Row Flex layout */
+.directory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.directory-title {
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Base button parameters */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-add { background-color: #2563eb; color: #ffffff; }
+.btn-add:hover { background-color: #1d4ed8; }
+
+.btn-view { background-color: #1e293b; color: #ffffff; }
+.btn-view:hover { background-color: #0f172a; }
+
+.btn-export { background-color: #64748b; color: #ffffff; }
+.btn-export:hover { background-color: #475569; }
+
+/* --- White Card panel background details --- */
+.directory-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+/* --- Filter Layout Controls --- */
+.filter-section {
+    padding: 24px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.filter-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.filter-subtitle {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin-top: 2px;
+    margin-bottom: 16px;
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Search Box Container Layouts */
+.input-wrapper {
+    position: relative;
+    width: 260px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #334155;
+    outline: none;
+    background-color: #f8fafc;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 0.875rem;
+}
+
+.layer-filter-btn {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* --- Data Table Segment Structuring --- */
+.table-title {
+    padding: 20px 24px 8px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.customer-table th {
+    background-color: #ffffff;
+    color: #fff;
+    font-size: 0.815rem;
+    font-weight: 600;
+    padding: 14px 24px;
+    text-align: left;
+    border-bottom: 2px solid #f1f5f9;
+    background-color: #2563eb;
+}
+
+.customer-table td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.875rem;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.customer-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Column customization overrides */
+.id-col {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.name-col {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.pledge-count {
+    text-align: center;
+    font-weight: 500;
+}
+
+.text-center { text-align: center; }
+
+/* Checkbox alignment style modifications */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+/* --- Custom Status Badge Elements --- */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 75px;
+}
+
+.badge.active-badge {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge.inactive-badge {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Actions Menu Dot Trigger style settings */
+.action-cell {
+    color: #94a3b8;
+    cursor: pointer;
+    text-align: center;
+}
+.action-cell:hover {
+    color: #475569;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Modal Overlay Layout Panel Settings --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6); /* Dark translucent background shadow */
+    backdrop-filter: blur(4px); /* Modern soft premium backdrop blur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Higher position depth index level over your sticky sidebars */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+/* Toggle selector utility to pop panel open */
+.modal-overlay.show-modal {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* --- Card container details --- */
+.modal-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 750px; /* ពង្រីកប្រអប់ពី 520px ទៅ 750px ដើម្បីចេញជាពីរជួរស្អាត */
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+    overflow: hidden;
+    max-height: 90vh; /* កំណត់កម្ពស់ខ្ពស់បំផុតត្រឹម ៩០% នៃអេក្រង់ */
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.khmer-os{
+    font-family: Khmer OS;
+}
+
+.form-scroll-container {
+    padding: 24px;
+    overflow-y: auto; /* បង្កើតរបារ Scroll ស្វ័យប្រវត្តិនៅពេលព័ត៌មានវែង */
+    flex: 1;
+}
+
+.modal-overlay.show-modal .modal-card {
+    transform: scale(1);
+}
+
+/* Modal Title Header Alignment layout styling */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e2e8f0;
+    background-color: #0b2240;
+}
+
+.modal-header h3 {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    color: #94a3b8;
+    cursor: pointer;
+    line-height: 1;
+}
+.close-modal-btn:hover { color: #64748b; }
+
+/* --- Input Fields Layout Form Grid Components --- */
+.modal-form { 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevents container leaks */
+    flex: 1;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.form-section-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1e3a8a; /* ពណ៌ខៀវ */
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-scroll-container {
+    padding: 24px;
+    overflow-y: auto; /* ⚠️ This activates the scrollbar internally */
+    flex: 1;
+}
+
+.form-section-title:first-child {
+    margin-top: 0;
+}
+
+/* តុបតែងវាលអត្ថបទវែង Textarea */
+.form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #1e293b;
+    outline: none;
+    background-color: #ffffff;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.form-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* តុបតែងវាល Upload ឯកសារ File Input */
+.form-group input[type="file"] {
+    background-color: #f8fafc;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group.full-width { grid-column: span 2; }
+
+.form-group label {
+    font-size: 0.815rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #1e293b;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.15s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* --- Control Footer Action row properties --- */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid #0b2240;
+    padding: 10px;
+    background-color: #0b2240;
+    align-items: center;
+}
+
+.btn-cancel {
+    background-color: #f1f5f9;
+    color: #475569;
+    border: none;
+    padding: 5px 18px;
+    border-radius: 6px;
+    font-size: 0.675rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-cancel:hover { background-color: #e2e8f0; }
+
+.btn-submit {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 5px 18px;
+    border-radius: 6px;
+    font-size: 0.675rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-submit:hover { background-color: #1d4ed8; }
