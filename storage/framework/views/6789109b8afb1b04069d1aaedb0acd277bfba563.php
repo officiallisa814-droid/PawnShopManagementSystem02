@@ -84,7 +84,7 @@
         .submit-btn {
             width: 100%;
             padding: 14px;
-            background-color: #029676; /* ពណ៌បៃតងដូចរូបថតរបស់អ្នក */
+            background-color: #0b2240; /* ពណ៌បៃតងដូចរូបថតរបស់អ្នក */
             color: #ffffff;
             border: none;
             border-radius: 8px;
@@ -95,7 +95,7 @@
         }
 
         .submit-btn:hover {
-            background-color: #027a5e;
+            background-color: #081a30;
         }
 
         .switch-text {

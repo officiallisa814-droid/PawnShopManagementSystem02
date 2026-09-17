@@ -115,26 +115,47 @@
         <h2>Signup</h2>
 
         <!-- 1. Form posts input values straight to signup handler route -->
-        <form action="{{ route('signup') }}" method="POST">
+        <form action="<?php echo e(route('signup')); ?>" method="POST">
             <!-- 2. Security token tag required by Laravel to prevent hackers -->
-            @csrf
+            <?php echo csrf_field(); ?>
 
             <!-- 3. New Input Field: Added user full name parameter -->
             <div class="input-field">
-                <input type="text" name="name" placeholder="Enter your full name" required value="{{ old('name') }}">
-                @error('name') <span style="color: #ef4444; font-size: 12px; display: block; text-align: left;">{{ $message }}</span> @enderror
+                <input type="text" name="name" placeholder="Enter your full name" required value="<?php echo e(old('name')); ?>">
+                <?php $__errorArgs = ['name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> <span style="color: #ef4444; font-size: 12px; display: block; text-align: left;"><?php echo e($message); ?></span> <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
             </div>
 
             <div class="input-field">
                 <!-- Added name="email" attribute to connect with database -->
-                <input type="email" name="email" placeholder="Enter your email" required value="{{ old('email') }}">
-                @error('email') <span style="color: #ef4444; font-size: 12px; display: block; text-align: left;">{{ $message }}</span> @enderror
+                <input type="email" name="email" placeholder="Enter your email" required value="<?php echo e(old('email')); ?>">
+                <?php $__errorArgs = ['email'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> <span style="color: #ef4444; font-size: 12px; display: block; text-align: left;"><?php echo e($message); ?></span> <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
             </div>
 
             <div class="input-field">
                 <!-- Added name="password" attribute to track secret characters -->
                 <input type="password" name="password" placeholder="Create a password (min 6 chars)" required>
-                @error('password') <span style="color: #ef4444; font-size: 12px; display: block; text-align: left;">{{ $message }}</span> @enderror
+                <?php $__errorArgs = ['password'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> <span style="color: #ef4444; font-size: 12px; display: block; text-align: left;"><?php echo e($message); ?></span> <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
             </div>
 
             <div class="input-field">
@@ -146,7 +167,7 @@
 
             <div class="switch-text">
                 <!-- Link route sends users directly back to sign in layouts window -->
-                Already have an account? <a href="{{ route('login') }}" class="login">Login</a>
+                Already have an account? <a href="<?php echo e(route('login')); ?>" class="login">Login</a>
             </div>
         </form>
     </div>
@@ -154,3 +175,4 @@
 </body>
 
 </html>
+<?php /**PATH C:\wamp64\www\PawnShopManagementSystemV02\resources\views/auth/signup.blade.php ENDPATH**/ ?>

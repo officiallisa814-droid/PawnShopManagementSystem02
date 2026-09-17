@@ -68,7 +68,7 @@ body {
 }
 
 .input-field input:focus {
-  border-color: #009677;
+  border-color: #0b2240;
 }
 
 .forgot-link {
@@ -76,7 +76,7 @@ body {
 }
 
 .forgot-link a {
-  color: #009677;
+  color: #0b2240;
   font-size: 14px;
   text-decoration: none;
 }
@@ -87,7 +87,7 @@ body {
 
 .submit-btn {
   width: 100%;
-  background-color: #009677;
+  background-color: #0b2240;
   color: #ffffff;
   border: none;
   padding: 14px;
@@ -99,7 +99,7 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: #007d63;
+  background-color: #0b2240;
 }
 
 .switch-text {
