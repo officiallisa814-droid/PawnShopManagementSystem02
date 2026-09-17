@@ -30,8 +30,9 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Main welcome page
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
+
 
 
 // ==========================================================
